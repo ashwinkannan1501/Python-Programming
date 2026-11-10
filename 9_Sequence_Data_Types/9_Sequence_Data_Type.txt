@@ -1,0 +1,15 @@
+Sequence Data Types : 
+In Python , the sequence is an ordered collection of items, where each element is indexed by an integer.
+The categories of sequence data types is : String (str), lists (list) , Tuple (tuple) and Range (range)
+
+Universal Sequence Operations : 
+These 4 types adhere to the sequence protocol, they all support a shared set of operations.
+Positive Index:   0    1    2    3    4
+ Sequence:       ['A', 'B', 'C', 'D', 'E']
+ Negative Index:  -5   -4   -3   -2   -1
+ -> Zero Based Indexing : 's[0]' gets the 1st item, 's[1]' gets the 2nd item and so on. Whereas 's[-1]' gets the last item , 's[-2]' gets the 2nd last item and so on
+ -> Slicing : s[start:[stop]:[step]] extracts the subset , whereas the 'stop' and 'step' are optional and 'stop' is exclusive
+-> Length : len(s) retruns the total number of elements 
+-> Membership ('in' & 'not in' operator) 'x in s' ; 'x not in s' returns the boolean checks
+-> Concatenation & Repetition : s1+s2 concatenates and s*n repeeats (valid for 'str', 'lists' & 'tuple')
+-> Min/Max/Count : 'min(s)', 'max(s)', 's.count(x)' , 's.index(x)' 

@@ -1,0 +1,10 @@
+(1) What is python ? : 
+Python is very popular , human readable , interpreted , Object - Oriented and high level programming languages
+Python is dunamically typed and garbage collected programming langugaes
+
+(2) Why to learn python ?
+1. It is simple and powerful
+2. It is used everywhere and everything like automation , scripting , data science, AI , web development , etc.,
+3. It is used to build AI
+4. All Top Companies are expecting Python language efficiency
+
