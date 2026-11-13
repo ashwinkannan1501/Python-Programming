@@ -42,6 +42,7 @@ candidate = {
     "Gender" : "Male",
     "Role" : "Software Engineer"
 }
+
 # 2. using dict() method : 
 url_config = dict(host="localhost",
                   port=8000,
@@ -64,4 +65,55 @@ empty2 = dict()
 print(f'Empty Dict 1 : {empty1}\nEmpty Dict 2 : {empty2}')
 
 # Accessing and Modifying Elements : 
-1. 
+# 1. Reading Values 
+print(f'The candidate mapping value are : {candidate}')
+# using square bracket lookup
+print(f'Name of the Candidate : {candidate["Name"]}')
+# Using .get() method [Safe to use to handle exceptions]
+print(f'Age of Candidate : {candidate.get("Age")}')
+print(f'Candidate Email Address : {candidate.get("Email", "Email ID not found in candidate dictionary")}') # Instead of throwing 'KeyError', it provides the default value
+print(f'Email Information of the candidate : {candidate.get("Email")}') # Result : None , due to "Email" key not present
+# print(f'Company Name : {candidate["company"]}') # Throws KeyError since the key 'company' not present in 'candidate' dictionary
+
+# 2. Adding & Updating Entries (key-value pair)
+candidate["Email"] = "ashwin.kannan.tech@gmail.com" # Adds new key-value pair to the end of the dictionary
+candidate["Role"] = "DevOps Engineer" # Update the new value in the existing key
+print(f'Updated Candidate Information : {candidate}') # Prints the updated candidate information
+
+# Built-in dictionary methods : 
+# 1. To Inspect and View Objects
+keys = url_config.keys()
+print(f'Displaying all keys of URL Config : {keys}') 
+print(f'Data Type : {type(keys)}') # dict_keys
+values = url_config.values()
+print(f'Displaying all assigned values of URL Config : {values}')
+print(f'Data Type : {type(values)}') # dict_values
+items = url_config.items()
+print(f'Displaying all the items present in URL Config : {items}')
+print(f'Data Type : {type(items)}') # dict_items
+
+# iterating the individual key-value pair using for loop
+print(f'The Candidate Information is given below')
+for (key, value) in candidate.items():
+    print(f'{key} : {value}')
+
+# Mutation and Extraction methods
+tuple_key = (2345, 7890, 567)
+popped_value = data_type_items.pop(tuple_key, str(tuple_key)+"not in dictionary")
+print(f'The Popped Element is : {popped_value}')
+print(f'Updated Data Type Items : {data_type_items}')
+
+#popitem() method :
+data_type_items.popitem()
+print(f'Updated Data Type Item is : {data_type_items.items()}')
+# empty1.popitem() # Throws KeyError since they are no items to pop out
+
+# clear()
+data_type_items.clear()
+print(f'Data Type Item elements : {data_type_items}')
+# Removing specific item Using del keyword
+del url_config["debug"]
+print(f'Updated URL Config : {url_config}')
+
+del empty1
+# print(empty1) # Throws NameError due to deletion of varible
